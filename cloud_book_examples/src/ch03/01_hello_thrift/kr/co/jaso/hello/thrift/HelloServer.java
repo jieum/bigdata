@@ -17,7 +17,7 @@ public class HelloServer {
     
     final TNonblockingServerSocket socket = new TNonblockingServerSocket(port);
     final HelloService.Processor processor = new HelloService.Processor(
-        new   cc  n());
+        new HelloHandler());
     final TServer server = new THsHaServer(new TProcessorFactory(processor), socket,
         new TFramedTransport.Factory(), new TBinaryProtocol.Factory(), options);
 
